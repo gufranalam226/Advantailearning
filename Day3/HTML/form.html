@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form</title>
+</head>
+<br>
+    <h1>Submit your details</h1>
+    <form action="#" method="get">
+        <fieldset style="width: fit-content">
+            <legend>Enter your details :</legend>
+            <label for="name">Name :
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </label><br>
+
+            <label for="email">Email : 
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </label><br>
+
+            <label for="password">Password : 
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </label><br>
+            
+            <label for="gender">Select your gender :
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </label></br>
+
+            <label for="city">Select your city :
+                <select name="city" id="city">
+                    <option value="Panipat" disabled selected>--Select--</option>
+                    <option value="Panipat">Panipat</option>
+                    <option value="Sonipat">Sonipat</option>
+                    <option value="Jind">Jind</option>
+                    <option value="Karnal">Karnal</option>
+                </select>
+            </label></br>
+
+            <label for="textarea">Enter your message :
+
+                <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+            </label></br>
+
+            <label for="range">Select value : 
+                <input type="range" id="range" name="range" min="0" max="100" value="50">
+            </label></br>
+
+            <label for="date">Select date :
+                <input type="date" id="date" name="date">
+            </label></br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        
+            
+            
+        </fieldset>
+    </form>
+</body>
+</html>

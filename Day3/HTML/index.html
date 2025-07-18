@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body>
+    <!-- mouse events -->
+    <button onclick="alert('mouse button clcked')">On click</button>
+    <button ondblclick="alert('mouse button double clicked')">On double click</button>
+    <button onmousedown="alert('mouse button pressed')">On mouse down</button>
+    <button onmouseup="alert('mouse button released')">On mouse up</button>
+    <button onmouseover="alert('mouse over on button')">On mouse over</button>
+    <button onmousemove="alert('mouse moved')">On mouse move</button>
+
+    <!-- keybord events -->
+    <button onkeydown="alert('keybord key pressed')">On key down</button>
+    <button onkeyup="alert('keybord key released')">On key up</button>
+    <button onkeypress="alert('key pressed')">On key press</button>
+
+    <script>
+        // browser events
+        window.onload = function(){
+            alert('page loaded');
+        }
+        window.ononline = function(){
+            alert('online');
+        }
+        window.onoffline = function(){
+            alert('offline');
+        }
+        
+        
+    </script>
+   
+</body>
+</html>
