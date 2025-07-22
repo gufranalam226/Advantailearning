@@ -71,5 +71,5 @@ Smart suggestion feature suggests in the right side – suggest appropriate chan
 Debug code – debug the code from the console error
 MCP server (model context protocol) - 
 
-Key bote – 
+Key Note – 
 How github copilot work and cursor AI and kiro and other ide ai
