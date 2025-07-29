@@ -16,6 +16,7 @@ const engineere = {
 }
 
 engineere.__proto__ = user;
+Object.setPrototypeOf(engineere, user); // another way to add functionality of other object
 
 console.log(engineere); //engineere have the access of user object also we can aecss user data also using engineere object
 

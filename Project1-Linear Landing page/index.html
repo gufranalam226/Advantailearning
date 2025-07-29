@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Linear</title>
+</head>
+<body class="bg-[#08090a]">
+    <!-- Header -->
+    <header class="flex sticky z-50 top-0 items-center justify-center border-b border-[#8a8f98] border-opacity-20 bg-[#08090a] h-16 w-full">
+        <div class="container flex relative justify-between items-center mx-14 max-w-5xl">
+            <div class="logo text-white">
+                <a href="#">
+                    <svg height="20" viewBox="0 0 400 100" fill="currentColor" size="20" color="currentColor" aria-label="Linear"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9266 16.3713c-.5283.5806-.4933 1.4714.0617 2.0265l68.5946 68.5946c.5551.555 1.4459.59 2.0265.0617 10.0579-9.1522 16.3713-22.3478 16.3713-37.0179C99.9807 22.402 77.5788 0 49.9445 0 35.2744 0 22.0788 6.31337 12.9266 16.3713ZM4.35334 29.3894c-.25348.5589-.12567 1.2142.30824 1.6481L68.9432 95.3191c.4339.4339 1.0892.5617 1.6481.3083 1.485-.6736 2.9312-1.4176 4.3344-2.2277.8341-.4815.9618-1.6195.2808-2.3005L8.88146 24.7742c-.68097-.681-1.81894-.5532-2.30045.2808-.81013 1.4032-1.55411 2.8494-2.22767 4.3344ZM.453579 47.796c-.300979-.301-.46112014-.7158-.4327856-1.1405.1327026-1.9891.3816396-3.9463.7400796-5.865.214926-1.1505 1.620727-1.5497 2.448307-.7222L59.9124 96.7715c.8275.8276.4283 2.2334-.7222 2.4483-1.9187.3585-3.8759.6074-5.865.7401-.4247.0283-.8395-.1318-1.1405-.4328L.453579 47.796ZM3.93331 61.7589c-1.0331-1.0331-2.70028-.1429-2.32193 1.2683C6.22104 80.2203 19.7604 93.7597 36.9535 98.3693c1.4112.3784 2.3014-1.2888 1.2683-2.3219L3.93331 61.7589ZM201.602 27.535c3.587 0 6.494-2.918 6.494-6.5175S205.189 14.5 201.602 14.5c-3.586 0-6.493 2.918-6.493 6.5175s2.907 6.5175 6.493 6.5175Zm-55.621 56.8396V14.5039h11.54v59.648h31.115v10.2227h-42.655Zm82.136-28.511v28.511h-11.166V34.8555h11.026v8.4876l.14-.0937c1.121-2.6573 2.928-4.8769 5.42-6.6589 2.491-1.8132 5.668-2.7198 9.531-2.7198 3.426 0 6.54.766 9.344 2.2978 2.803 1.5006 5.045 3.7045 6.727 6.6119 1.682 2.9074 2.523 6.4713 2.523 10.6916v30.9026h-11.166V55.0195c0-3.7514-.997-6.5963-2.99-8.5345-1.962-1.9695-4.594-2.9543-7.896-2.9543-2.118 0-4.049.4377-5.793 1.313-1.744.8754-3.13 2.2196-4.158 4.0328-1.028 1.8132-1.542 4.1422-1.542 6.9871Zm101.105 27.6669c2.554 1.0942 5.482 1.6413 8.783 1.6413 2.71 0 5.03-.3439 6.961-1.0317 1.932-.719 3.52-1.6725 4.766-2.8605 1.277-1.1879 2.289-2.4853 3.037-3.8921h.187v6.9871h10.699V50.2833c0-2.4072-.468-4.6111-1.402-6.6119-.934-2.0008-2.289-3.7358-4.065-5.2051-1.744-1.4694-3.862-2.5948-6.354-3.3763-2.491-.8129-5.295-1.2193-8.409-1.2193-4.267 0-7.958.7347-11.073 2.204-3.084 1.4381-5.497 3.3763-7.242 5.8148-1.744 2.4384-2.694 5.1895-2.85 8.2531h10.793c.124-1.438.623-2.7198 1.495-3.8452.872-1.1254 2.056-2.0008 3.551-2.626 1.495-.6565 3.223-.9848 5.186-.9848 1.962 0 3.628.3283 4.999.9848 1.401.6565 2.476 1.5475 3.223 2.6729.748 1.1254 1.122 2.4384 1.122 3.939v.3752c0 1.1254-.39 1.9538-1.168 2.4853-.748.5314-2.025.9222-3.831 1.1723-1.776.2501-4.205.5471-7.289.891-2.523.2813-4.952.7034-7.288 1.2661-2.336.5627-4.423 1.3912-6.261 2.4853-1.806 1.0942-3.239 2.5479-4.298 4.3611-1.059 1.8132-1.588 4.1422-1.588 6.987 0 3.2826.747 6.0336 2.242 8.2532 1.495 2.1884 3.52 3.8453 6.074 4.9707Zm18.081-8.3001c-1.807.9691-4.034 1.4537-6.681 1.4537-2.679 0-4.813-.5627-6.401-1.6881-1.589-1.1567-2.383-2.7355-2.383-4.7362 0-1.5631.436-2.8293 1.308-3.7984.904-.9691 2.087-1.735 3.551-2.2977 1.464-.5628 3.052-.9535 4.765-1.1724 1.246-.1875 2.461-.3751 3.645-.5627 1.183-.2188 2.289-.422 3.317-.6096 1.028-.2188 1.9-.4377 2.616-.6565.748-.2188 1.293-.4533 1.635-.7034v5.5334c0 1.9382-.451 3.7202-1.355 5.3458-.872 1.5944-2.211 2.8917-4.017 3.8921Zm26.094 9.1442V34.8555h10.745v8.1594h.141c.903-2.8136 2.32-4.955 4.251-6.4244 1.962-1.5005 4.532-2.2508 7.709-2.2508.779 0 1.48.0312 2.102.0938.655.0312 1.2.0625 1.636.0937v10.082c-.405-.0625-1.122-.1406-2.149-.2344-1.028-.0938-2.118-.1407-3.271-.1407-1.838 0-3.519.422-5.046 1.2661-1.526.8441-2.741 2.1415-3.644 3.8921-.872 1.7195-1.308 3.8922-1.308 6.5182v28.4641h-11.166Zm-177.401 0V34.8555h11.166v49.5191h-11.166Zm84.238-2.204c3.582 2.2196 7.834 3.3294 12.755 3.3294 3.8 0 7.257-.6878 10.372-2.0633 3.146-1.4068 5.762-3.3294 7.849-5.7678 2.087-2.4697 3.442-5.3146 4.065-8.5346h-10.512c-.468 1.4693-1.231 2.7667-2.29 3.8921-1.027 1.0942-2.32 1.9539-3.877 2.5792-1.558.6252-3.364.9378-5.42.9378-2.772 0-5.155-.6252-7.148-1.8757-1.962-1.2505-3.457-2.9855-4.485-5.2051-.933-2.043-1.443-4.3564-1.529-6.9402h35.915v-3.0012c0-3.8139-.561-7.284-1.682-10.4102-1.121-3.1575-2.71-5.8773-4.766-8.1594-2.055-2.3134-4.531-4.0953-7.428-5.3458-2.866-1.2505-6.058-1.8757-9.578-1.8757-4.578 0-8.627 1.1098-12.147 3.3294-3.52 2.2196-6.276 5.2833-8.27 9.191-1.993 3.9078-2.99 8.3782-2.99 13.4114 0 5.0019.966 9.4568 2.897 13.3645 1.931 3.8765 4.688 6.9246 8.269 9.1442Zm23.501-32.7783c-1.028-2.1258-2.492-3.767-4.392-4.9237-1.9-1.1567-4.142-1.7351-6.728-1.7351-2.554 0-4.781.5784-6.681 1.7351-1.868 1.1567-3.332 2.7979-4.391 4.9237-.756 1.5396-1.234 3.2903-1.434 5.2521h25.059c-.2-1.9618-.678-3.7125-1.433-5.2521Z"></path></svg>
+
+                </a>
+
+            </div>
+
+            <!-- Navigate menu -->
+            <div class="menu text-[#8a8f98] flex items-center justify-center text-sm font-semibold">
+                <ul class="nav-items flex items-center">
+                    <li class="item product-item px-4 h-8 flex items-center "><a href="#">Product</a>
+                        <div class="dropdown hidden absolute w-[700px] top-6 right-1/2 translate-x-1/2 m-auto p-4">
+                            <div class=" p-2 rounded-lg border border-[#8a8f98] border-opacity-20 bg-[#08090a]">
+                                <div class="flex dropdown-container bg-[#ffffff14] m-auto gap-4 p-2 rounded-md w-full">
+                                    <div class="dropdown-container-left flex-[1] border-r border-[#8a8f98] border-opacity-20 p-2 w-full ">
+                                        <p class="text-[#8a8f98] mb-4 pl-2">Core feature</p>
+                                        <div class="text-white feat-item-container">
+                                            <h2 class="feat-title">Plan</h2>
+                                            <p class="feat-description">Set the product direction with projects and initiatives</p>
+                                        </div>
+                                        <div class="feat-item-container">
+                                            <h2 class="feat-title">Build</h2>
+                                            <p class="feat-description">Make pregress with issue tracking and cycle planning</p>
+                                        </div>
+    
+                                    </div>
+                                    <div class="dropdown-container-right flex-[2] w-full p-2">
+                                        <h2 class="text-[#8a8f98] mb-4 pl-2">More</h2>
+                                        <div class="flex flex-wrap">
+                                            <div class="more-item-container">
+                                                <h2 class="more-title">Customer requests</h2>
+                                                <p class="more-description">Manage user feedback</p>
+                                            </div>
+                                            <div class="more-item-container">
+                                                <h2 class="more-title">Integrations</h2>
+                                                <p class="more-description">Collaborate access tool</p>
+                                            </div>
+                                            <div class="more-item-container">
+                                                <h2 class="more-title">Insights</h2>
+                                                <p class="more-description">Realtime analytics</p>
+                                            </div>
+                                            <div class="more-item-container">
+                                                <h2 class="more-title">Mobile app</h2>
+                                                <p class="more-description">Linear in your pocket</p>
+                                            </div>
+                                            <div class="more-item-container">
+                                                <h2 class="more-title">Linear Asks</h2>
+                                                <p class="more-description">Workspace requests</p>
+                                            </div>
+                                            <div class="more-item-container">
+                                                <h2 class="more-title">Linear for Agents</h2>
+                                                <p class="more-description">Collaborate with AI teammates</p>
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+                                <div class="new flex justify-between items-center m-2 px-6">
+                                    <div class="new-container rounded-md p-2 hover:bg-[#ffffff20]">
+                                        <span class="text-sm text-[#ffffff]">New: Email intake for Linear Asks</span>
+                                        <span class="text-sm ml-2 text-[#8a8f98]">Turn emails into tarackable issues</span>
+                                    </div>
+                                    <div class="new-btn hover:bg-[#ffffff20] rounded-md p-2 text-blue-600">Changelog</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item resources-item px-4 h-8 flex items-center"><a href="#">Resources</a>
+                        <div class="dropdown hidden absolute top-6 right-1/2 w-[700px] translate-x-1/2 m-auto p-4">
+                            <div class=" p-2 rounded-lg border border-[#8a8f98] border-opacity-20 rounded-md bg-[#08090a]">
+                                <div class="dropdown-container bg-[#ffffff14] flex m-auto gap-4 p-2 rounded-md">
+                                    <div class="dropdown-container-left border-r border-[#8a8f98] border-opacity-20 p-2 flex-[1] ">
+                                        <p class="text-[#8a8f98] mb-4 pl-2">Company</p>
+                                        <div class="text-white feat-item-container">
+                                            <h2 class="feat-title">About</h2>
+                                            <p class="feat-description">Meet the team</p>
+                                        </div>
+                                        <div class="feat-item-container">
+                                            <h2 class="feat-title">Careers</h2>
+                                            <p class="feat-description">We're hiring</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="dropdown-container-right flex-[2] p-2">
+                                        <h2 class="text-[#8a8f98] mb-4 pl-2">Explore</h2>
+                                        <div class="flex flex-wrap">
+                                        <div class="more-item-container">
+                                            <h2 class="more-title">Developers</h2>
+                                            <p class="more-description">Build on the Linear API</p>
+                                        </div>
+                                        <div class="more-item-container">
+                                            <h2 class="more-title">Switch to Linear</h2>
+                                            <p class="more-description">Migratin guide</p>
+                                        </div>
+                                        <div class="more-item-container">
+                                            <h2 class="more-title">Security</h2>
+                                            <p class="more-description">Safe, secure and private</p>
+                                        </div>
+                                        <div class="more-item-container">
+                                            <h2 class="more-title">Download</h2>
+                                            <p class="more-description">Get the app</p>
+                                        </div>
+                                        <div class="more-item-container">
+                                            <h2 class="more-title">Docs</h2>
+                                            <p class="more-description">How to use Linear</p>
+                                        </div>
+                                        <div class="more-item-container">
+                                            <h2 class="more-title">Quality</h2>
+                                            <p class="more-description">Conversations on quality</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </li>
+                    <li class="item px-4 h-8 flex items-center"><a href="#">Pricing</a></li>
+                    <li class="item px-4 h-8 flex items-center"><a href="#">Customers</a></li>
+                    <li class="item px-4 h-8 flex items-center"><a href="#">Blog</a></li>
+                    <li class="item px-4 h-8 flex items-center"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- buttons -->
+            <div class="buttons inline-flex gap-2">
+                <button class="login-btn text-gray-400 text-sm font-semibold p-2 h-8 flex items-center">Log in</button>
+                <button class="signup-btn text-black-400 hover:bg-[#ffffff] text-sm font-semibold bg-[#ffffffee] h-8 p-2 inline-flex items-center gap-2 rounded-md">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero section -->
+    <section class="flex items-center justify-center w-full my-16">
+        <div class="flex flex-col max-w-5xl text-white">
+            <div class="text-6xl max-w-4xl font-semibold my-4 tracking-tighter">Linear is a purpose-built tool for planning and building products</div>
+            <div class="text-xl mt-4 w-full text-[#ffffffaa] ">Meet the system for modern software development.</div>
+            <div class="text-xl mb-4 text-[#ffffffaa]">Streamline issues, projects, and product roadmaps.</div>
+            <div>
+                <div class="flex my-4 h-10">
+                    <div class="flex justify-between items-center p-4 mr-2 rounded-xl h-full bg-[#ffffffdd] text-black font-semibold text-md hover:bg-[#ffffff]">
+                        <button>Start building</button>
+                    </div>
+                    <div class="flex justify-center items-center ml-2 rounded-xl px-4 h-full hover:bg-[#ffffff30] "><span class="bg-gradient-to-r from-white to-[#8a8f98] opacity-90 text-transparent font-semibold bg-clip-text">Introducing Linear for Agents</span></div>
+
+                </div>
+            </div>
+            <div class="">
+
+                <img src="./images/Screenshot 2025-07-25 115134.png"  alt="">
+            </div>
+            <!-- <div class="flex">
+                <div><img src="./images/hero_image1.png" alt=""></div>
+                <div><img src="./images/hero_image22.png" alt=""></div>
+                <div><img src="./images/hero_image33.png" alt=""></div>
+                
+                
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Startups to enterprice companies list-->
+    <section class="companies-list-section flex items-center justify-center w-full my-16">
+        <div class="companies-list-container m-8 max-w-5xl">
+            <div class="company-section-title text-center">
+                <div class="text-white text-[1.4rem] font-semibold">Powering the world's best product teams.</div>
+                <div class="text-gray-400 text-[1.4rem]">From next-gen startups to established enterprises.</div>
+            </div>
+            <div class="relative m-6 group">
+                <div class="flex justify-center items-center absolute w-full h-full group-hover:bg-[#ffffff01] group-hover:opacity-100 top-0 z-10">
+                    <div class="flex justify-center items-center p-1 px-4 text-white text-sm hidden group-hover:block h-8 w-fit bg-[#060606] border-[1px] border-[#ffffffaa] rounded-full cursor-pointer">Meet our customers</div>
+                </div>
+                <div class="first_slide group-hover:blur-lg hidden company-list grid grid-cols-3 grid-rows-2 gap-24 p-4  justify-items-center items-center">
+                    <div class="flex justify-center items-center object-contain"><img src="./images/Boom-Final-Logo-Horizontal-White_store.webp" alt=""></div>
+                    <div class="flex justify-center items-center object-contain h-[50px]"><img src="./images/cursor-text.png" width="100px" alt=""></div>
+                    <div class="flex justify-center items-center object-contain h-[50px]"><img src="./images/media_logo_supercell_white2x.png" width="50px"  alt=""></div>
+                    <div class="flex justify-center items-center object-contain h-[50px]"><img src="./images/Ramp_Logo.svg.png" width="100px" alt=""></div>
+                    <div class="flex justify-center items-center object-contain h-[50px]"><img src="./images/RemoteLogo_H_white.webp" width="100px" alt=""></div>
+                    <div class="flex justify-center items-center object-contain h-[50px]"><img src="./images/Retool.png" width="100px" alt=""></div>
+
+                </div>
+                <div class="second_slide company-list group-hover:blur-lg grid grid-cols-3 grid-rows-2 gap-16 p-4  justify-items-center items-center">
+                    <div class="flex justify-center items-center object-contain"><img src="./images/monzo-bank-logo-06.png" width="100px" alt=""></div>
+                    <div class="flex justify-center items-center object-contain"><img src="./images/openai-text.png" width="100px" alt=""></div>
+                    <div class="flex justify-center items-center object-contain"><img src="./images/runway-text.png" width="100px" alt=""></div>
+                    <div class="flex justify-center items-center object-contain"><img src="./images/scale-ai_BIG.D-b5963dd9.png" width="100px" alt=""></div>
+                    <div class="flex justify-center items-center object-contain"><img src="./images/vercel-text.png" width="100px" alt=""></div>
+                    <div class="flex justify-center items-center object-contain"><img src="./images/Brex.png" width="100px" class="object-contain" alt=""></div>
+                    
+                </div>
+                
+            </div>
+            <div class="meet-customer absolute hidden">Meet our customers ></div>
+        </div>
+    </section>
+
+
+
+    <!-- Made or modern product teams -->
+    <section class="flex items-center justify-center w-full">
+        <div class="modern-product-teams-container mx-12 my-16 p-4 max-w-5xl text-white ">
+            <div class="flex py-8 ">
+                <div class="modern-product-title font-semibold text-5xl w-1/2 p-4">Made for modern product teams</div>
+                <div class="modern-product-description p-6 w-1/2 px-[65px] text-md text-[#8a8f98]">Linear is shaped by the practices and principles that distinguish world-class product teams from the rest: relentless focus, fast execution, and a commitment to the quality of craft. <span class="text-white cursor-pointer cursor-pointer">Make the switch</span></div>
+            </div>
+            <div class="flex gap-2 ">
+                <div class="modern-product-cards h-[336px] w-[336px] bg-[#ffffff0d] hover:bg-[#ffffff12] rounded-3xl p-6 flex flex-col items-center justify-center">
+                    <div class="h-60 w-full"><img src="./images/card_image_1.png" class="" alt=""></div>
+                    <div class="flex items-center justify-center w-full gap-2 mt-4">
+                        <div class="text-xl font-bold flex flex-[13]">Purpose-built for product development</div>
+                        <div class="card-plus-icon flex justify-center flex-2 items-center text-2xl  border-2 border-[#ffffff14] rounded-full h-[40px] w-[40px] text-[#ffffff80]">+</div>
+                    </div>
+                </div>
+                <div class="modern-product-cards h-[336px] w-[336px] bg-[#ffffff0d] hover:bg-[#ffffff12] rounded-3xl p-6 flex flex-col items-center justify-center">
+                    <div class="h-60 w-full"><img src="./images/card_image_2.png" class="" alt=""></div>
+                    <div class="flex items-center justify-center w-full gap-2 mt-4">
+                        <div class="text-xl font-bold flex flex-[13]">Designed to move fast</div>
+                        <div class="card-plus-icon flex justify-center flex-2 items-center text-2xl  border-2 border-[#ffffff14] rounded-full h-[40px] w-[40px] text-[#ffffff80]">+</div>
+                    </div>
+                </div>
+                <div class="modern-product-cards h-[336px] w-[336px] bg-[#ffffff0d] hover:bg-[#ffffff12] rounded-3xl p-6 flex flex-col items-center justify-center">
+                    <div class="h-60 w-full"><img src="./images/card_image_3.png" class="" alt=""></div>
+                    <div class="flex items-center justify-center w-full gap-2 mt-4">
+                        <div class="text-xl font-bold flex flex-[13]">Crafted to perfection</div>
+                        <div class="card-plus-icon flex justify-center flex-2 items-center text-2xl  border-2 border-[#ffffff14] rounded-full h-[40px] w-[40px] text-[#ffffff80]">+</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Project and long-term plannning -->
+     <section class="flex items-start justify-center w-full bg-gradient-to-b from-[#151515] to-[#08090a]">
+        <div class="project-planning-container mx-12 my-12 p-4 w-full max-w-5xl text-white h-[900px] bg-[url('https://linear.app/cdn-cgi/imagedelivery/fO02fVwohEs9s9UHFwon6A/25491170-d59e-427e-ee76-a69dcf080300/f=auto,dpr=2,q=95,fit=scale-down,metadata=none')] bg-cover bg-bottom bg-no-repeat">
+            <div class="flex gap-2 items-center text-sm"><div class="h-2 w-[14px] bg-[#00ff00] rounded-full "></div>Project and long-term planning</div>
+            <div class="my-5 text-5xl font-semibold">Set the product direction</div>
+            <div class="text-[18px] text-[#ffffff] font-semibold w-[380px] my-10">Align your team around a unified product timeline. <span class="text-[#8a8f98]"`>Plan, manage, and track all product initiatives with Linear’s visual planning tools.</span></div>
+            <div ></div>
+        </div>
+     </section>
+
+
+    <!-- Project overview and manage project -->
+    <section class="flex items-center justify-center w-full">
+        <div class="flex project-overview-container mx-12 my-12 max-w-5xl text-white border-t border-b border-[#8a8f98] border-opacity-20 w-full">
+            <div class="w-1/2 py-14 pr-10 border-r border-[#8a8f98] border-opacity-20">
+                <div class="text-xl font-semibold">Manage projects end-to-end</div>
+                <div class="text-[#8a8f98] text-lg">Consolidate specs, milestones, tasks, and other documentation in one centralized location.</div>
+                <div class="w-full h-full mt-6"><img src="./images/project_image1.png" alt=""></div>
+            </div>
+            <div class="w-1/2 py-14 pl-10">
+                <div class="text-xl font-semibold">Project updates</div>
+                <div class="text-[#8a8f98] text-lg">Communicate progress and project health with built-in project updates.</div>
+                <div><img src="./images/manage_project.png" alt=""></div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Ideate and specify what to build next -->
+    <section class="flex items-center justify-center w-full">
+        <div class="flex flex-col max-w-5xl text-white">
+            <div class="flex max-w-5xl text-white h-[450px]">
+                <div class="flex flex-col w-1/2 relative top-20">
+                    <div class="text-2xl font-semibold my-2">Ideate and specify what to build</div>
+                    <div class="coll_docs text-lg text-[#ffffff] hover:text-[#ffffff] cursor-pointer">Collaborative documents</div>
+                    <div class="inline_comm text-lg text-[#8a8f98] hover:text-[#ffffff] cursor-pointer">Inline comments</div>
+                    <div class="text_issue text-lg text-[#8a8f98] hover:text-[#ffffff] cursor-pointer">Text-to-issue commands</div>
+                </div>
+                <div class="w-1/2 h-fit object-contain">
+                    <img class="image" src="./images/ideate_image1.png" alt="">
+                </div>
+            </div>
+            <div class="flex gap-20 border-t border-[#8a8f98] border-opacity-15 max-w-5xl text-white py-14 my-14">
+                <div>
+                    <div class="text-md font-semibold my-2">Initiatives</div>
+                    <div class="text-sm text-[#8a8f98]">Coordinate strategic product efforts</div>
+                </div>
+                <div>
+                    <div class="text-md font-semibold my-2">Cross-team projects</div>
+                    <div class="text-sm text-[#8a8f98]">Collaborate across teams and departments.</div>
+                </div>
+                <div>
+                    <div class="text-md font-semibold my-2">Milestones</div>
+                    <div class="text-sm text-[#8a8f98]">Break projects down into concrete phases.</div>
+                </div>
+                <div>
+                    <div class="text-md font-semibold my-2">Progress insights</div>
+                    <div class="text-sm text-[#8a8f98]">Track scope, velocity, and progress over time.</div>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+
+    <!-- issue tracking -->
+    <section class="flex items-center justify-center w-full bg-gradient-to-b from-[#101010] to-[#08090a]">
+        <div class="flex flex-col max-w-5xl text-white my-8 ">
+            <div class="cursor-pointer max-w-lg">
+                <div class="test-sm text-[#ffffffdd] ">
+                    Task tracking and sprint planning</div>
+                <div class="text-6xl font-semibold text-[#ffffff] my-4">Issue tracking you’ll enjoy using</div>
+            </div>
+            <div>
+                <div class="text-white font-semibold">Optimized for speed and efficiency.</div>
+                <div class="text-[#ffffff90] max-w-xs">Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team.</div>
+            </div>
+            <div> <img src="./images/Screenshot 2025-07-25 115134.png" alt=""></div>
+        </div>
+    </section>
+
+
+    <!-- Build momentum and manage incoming work -->
+    <section class="flex items-center justify-center w-full">
+        <div class="flex project-overview-container mx-12 my-12 max-w-5xl text-white border-t border-b border-[#8a8f98] border-opacity-20 w-full">
+            <div class="w-1/2 py-14 pr-10 border-r border-[#8a8f98] border-opacity-20">
+                <div class="text-xl font-semibold">Build momentum with Cycles</div>
+                <div class="text-[#8a8f98] text-lg max-w-xs">Create healthy routines and focus your team on what work should happen next.</div>
+                <div class="w-full h-full mt-6"><img src="./images/built_momentum.png" alt=""></div>
+            </div>
+            <div class="w-1/2 py-14 pl-10">
+                <div class="text-xl font-semibold">Manage incoming work with Triage</div>
+                <div class="text-[#8a8f98] text-lg max-w-sm">Review and assign incoming bug reports, feature requests, and other unplanned work.</div>
+                <div><img src="./images/build_momentum2.png" alt=""></div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Linear insights -->
+    <section class="flex items-center justify-center w-full">
+        <div class="flex flex-col max-w-5xl text-white">
+            <div class="flex flex-col relative top-20 h-[500px] bg-[url('./images/insights_image.png')] bg-cover bg-center bg-no-repeat">
+                <div class="text-2xl font-semibold ">Linear Insights</div>
+                <div class="text-lg text-[#8a8f98] max-w-md">Take the guesswork out of product planning with realtime analytics and reporting dashboards.</div>
+                <div class="flex w-fit my-6 bg-[#8a8f9830] text-[#ffffff60] font-semibold cursor-pointer hover:text-[#ffffff] px-4 p-1 border-2 border-[#ffffff10] rounded-lg">Learn more</div>
+                <!-- <div class="">
+                    <img src="./images/insights_image.png" alt="">
+                </div> -->
+            </div>
+            <div class="flex gap-20 max-w-5xl text-white py-14 my-14">
+                <div>
+                    <div class="text-md font-semibold my-2">Tailored workflows</div>
+                    <div class="text-sm text-[#8a8f98]">Track progress across custom issue flows for your team.</div>
+                </div>
+                <div>
+                    <div class="text-md font-semibold my-2">Custom views</div>
+                    <div class="text-sm text-[#8a8f98]">Switch between list and board. Group issues with swimlanes.</div>
+                </div>
+                <div>
+                    <div class="text-md font-semibold my-2">Filters</div>
+                    <div class="text-sm text-[#8a8f98]">Refine issue lists down to what’s most relevant to you.</div>
+                </div>
+                <div>
+                    <div class="text-md font-semibold my-2">SLAs</div>
+                    <div class="text-sm text-[#8a8f98]">Automatically apply deadlines to time-sensitive tasks.</div>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+
+    <!-- AI that works where you work -->
+    <section class="flex items-center justify-center w-full">
+        <div class="flex flex-col max-w-5xl text-white">
+            <div>
+                <div class="flex items-center gap-2 my-2 text-md"><div class="h-2 w-[14px] bg-[#02B8CC] rounded-full "></div>Artificial intelligence</div>
+                <div class="text-5xl font-bold my-2">AI that works where you work</div>
+            </div>
+            <div class="text-lg text-[#8a8f98] w-full max-w-md">Linear for Agents. Choose from a variety of AI agents and start delegating work, from code generation to other technical tasks.</div>
+            <div class="w-full h-full mt-6"><img src="./images/AI_work.png" alt=""></div>
+        </div>
+    </section>
+
+
+
+    <!-- Linear MCP -->
+    <section class="flex items-center justify-center w-full">
+        <div class="project-overview-container flex mx-12 my-12 max-w-5xl text-white border-t border-[#8a8f98] border-opacity-20 w-full">
+            <div class="w-1/2 py-14 pr-10 border-r border-[#8a8f98] border-opacity-20">
+                <div class="text-xl font-semibold">Linear MCP</div>
+                <div class="text-[#8a8f98] text-lg max-w-xs">Connect Linear to your favorite tools including Cursor, Claude, ChatGPT, and more.</div>
+                <div class="w-full h-full mt-6"><img src="./images/Linear_mcp1.png" alt=""></div>
+            </div>
+            <div class="w-1/2 py-14 pl-10">
+                <div class="text-xl font-semibold">AI natively built in</div>
+                <div class="text-[#8a8f98] text-lg max-w-sm">Linear uses the latest language models to power workflows from semantic search to summarizing your team’s project updates.</div>
+                <div><img src="./images/Linear_mcp2.png" alt=""></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Collaborate accross tool and teams -->
+    <section class="flex items-center justify-center w-full">
+        <div class="flex flex-col mx-12 my-12 max-w-5xl relative text-white ">
+            <div class="flex items-center gap-2 text-[#ffffffdd]"><div class="h-2 w-[14px] bg-[#B59AFF] rounded-full "></div>Workflows and integrations</div>
+            
+            <div class="flex gap-2 w-full my-4">
+                <div class="text-5xl font-bold w-1/2">Collaborate across tools and teams</div>
+                <div class="text-md text-[#8a8f98] w-1/2 pt-8 px-20">Expand the capabilities of the Linear system with a wide variety of integrations that keep everyone in your organization aligned and focused.</div>
+            </div>
+            <div class="flex content-start w-full gap-2 mt-8 ">
+                <div class="modern-product-cards h-[420px] w-[336px] bg-[#ffffff08] hover:bg-[#ffffff12] rounded-3xl p-6 flex flex-col items-center justify-center">
+                    <div class="h-fit w-full"><img src="./images/card_image_1.png" class="" alt=""></div>
+                    <div class="self-start text-[#8a8f98]">Customer requests</div>
+                    <div class="flex items-center justify-center w-full gap-2 mt-2">
+                        <div class="text-xl font-bold flex flex-[13]">Build what customers actually want</div>
+                        <div class="card-plus-icon flex justify-center flex-2 items-center text-2xl  border-2 border-[#ffffff14] rounded-full h-[40px] w-[40px] text-[#ffffff80]">+</div>
+                    </div>
+                </div>
+                <div class="modern-product-cards h-[420px] w-[336px] bg-[#ffffff08] hover:bg-[#ffffff12] rounded-3xl p-6 flex flex-col items-center justify-center">
+                    <div class="h-fit w-full"><img src="./images/card_image_1.png" class="" alt=""></div>
+                    <div class="self-start text-[#8a8f98]">Customer requests</div>
+                    <div class="flex items-center justify-center w-full gap-2 mt-2">
+                        <div class="text-xl font-bold flex flex-[13]">Build what customers actually want</div>
+                        <div class="card-plus-icon flex justify-center flex-2 items-center text-2xl  border-2 border-[#ffffff14] rounded-full h-[40px] w-[40px] text-[#ffffff80]">+</div>
+                    </div>
+                </div>
+                <div class="modern-product-cards h-[420px] w-[336px] bg-[#ffffff08] hover:bg-[#ffffff12] rounded-3xl p-6 flex flex-col items-center justify-center">
+                    <div class="h-fit w-full"><img src="./images/card_image_1.png" class="" alt=""></div>
+                    <div class="self-start text-[#8a8f98]">Customer requests</div>
+                    <div class="flex items-center justify-center w-full gap-2 mt-2">
+                        <div class="text-xl font-bold flex flex-[13]">Build what customers actually want</div>
+                        <div class="card-plus-icon flex justify-center flex-2 items-center text-2xl  border-2 border-[#ffffff14] rounded-full h-[40px] w-[40px] text-[#ffffff80]">+</div>
+                    </div>
+                </div>
+                <div class="modern-product-cards h-[420px] w-[336px] bg-[#ffffff08] hover:bg-[#ffffff12] rounded-3xl p-6 flex flex-col items-center justify-center">
+                    <div class="h-fit w-full"><img src="./images/card_image_1.png" class="" alt=""></div>
+                    <div class="self-start text-[#8a8f98]">Customer requests</div>
+                    <div class="flex items-center justify-center w-full gap-2 mt-2">
+                        <div class="text-xl font-bold flex flex-[13]">Build what customers actually want</div>
+                        <div class="card-plus-icon flex justify-center flex-2 items-center text-2xl  border-2 border-[#ffffff14] rounded-full h-[40px] w-[40px] text-[#ffffff80]">+</div>
+                    </div>
+                </div>
+               
+                
+                
+            </div>
+            <div></div>
+        </div>
+
+    </section>
+
+
+    <!-- Built on strong foundation -->
+    <section class="flex items-center justify-center w-full">
+        <div class="flex mx-12 my-12 w-full max-w-5xl text-white">
+            <div class="w-1/2 mr-16">
+                <div class="flex items-center gap-2 text-[#ffffffdd]"><div class="h-2 w-[14px] bg-[#B59AFF] rounded-full "></div>Workflows and integrations</div>
+                <div class="text-5xl font-bold my-4">Built on strong foundations</div>
+                <div class="text-[#8a8f98] max-w-sm my-8">Linear is so simple to use, it’s easy to overlook the wealth of complex technologies packed under the hood that keep Linear robust, safe, and blazing fast.</div>
+                <div class="flex flex-col gap-4 border-t-2 border-[#ffffff14] py-4">
+                    <div class="flex gap-2">
+                        <div class="w-1/2">Linear Sync Engine</div>
+                        <div class="w-1/2 max-w-[160px] text-[#8a8f98]">Built with a high-performance architecture and an obsessive focus on speed.</div>
+                    </div>
+                    <div class="flex gap-2">
+                        <div class="w-1/2">Enterprise-ready security</div>
+                        <div class="w-1/2 max-w-[160px] text-[#8a8f98]">Best-in-class security practices keep your work safe and secure at every layer.</div>
+                    </div>
+                    <div class="flex gap-2">
+                        <div class="w-1/2">Engineered for scale</div>
+                        <div class="w-1/2 max-w-[160px] text-[#8a8f98]">Built for teams of all sizes. From early-stage startups to global enterprises.</div>
+                    </div>
+                </div>
+                <div><img src="./images/built_strong_foundation2.png" alt=""></div>
+            </div>
+            <div class="w-1/2"><img src="./images/built_strong_foundation.png" class="h-full w-full object-cover overflow-visible object-left" alt=""></div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Built the future -->
+    <section class="flex items-center justify-center w-full">
+        <div class="flex justify-between items-center w-full max-w-5xl text-white my-16">
+            <div class="text-4xl font-bold">Plan the present. Build the future.</div>
+            <div class="flex gap-2">
+                <div class="text-white bg-[#ffffff20] font-semibold px-4 py-2 rounded-lg cursor-pointer border-2 border-[#ffffff10] hover:bg-[#ffffff30]">Contact sales</div>
+                <div class="text-[#08090a] bg-[#ffffffdd] font-semibold px-4 py-2 rounded-lg cursor-pointer hover:bg-[#ffffff]">Get started</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="flex items-center justify-center w-full">
+        <div class="footer flex flex-wrap justify-between items-start w-full max-w-5xl text-white my-16">
+            <div class="flex flex-1 min-w-2xl">
+                <a href="#">
+                    <svg height="20" viewBox="0 0 400 100" fill="currentColor" size="20" color="currentColor" aria-label="Linear"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9266 16.3713c-.5283.5806-.4933 1.4714.0617 2.0265l68.5946 68.5946c.5551.555 1.4459.59 2.0265.0617 10.0579-9.1522 16.3713-22.3478 16.3713-37.0179C99.9807 22.402 77.5788 0 49.9445 0 35.2744 0 22.0788 6.31337 12.9266 16.3713ZM4.35334 29.3894c-.25348.5589-.12567 1.2142.30824 1.6481L68.9432 95.3191c.4339.4339 1.0892.5617 1.6481.3083 1.485-.6736 2.9312-1.4176 4.3344-2.2277.8341-.4815.9618-1.6195.2808-2.3005L8.88146 24.7742c-.68097-.681-1.81894-.5532-2.30045.2808-.81013 1.4032-1.55411 2.8494-2.22767 4.3344ZM.453579 47.796c-.300979-.301-.46112014-.7158-.4327856-1.1405.1327026-1.9891.3816396-3.9463.7400796-5.865.214926-1.1505 1.620727-1.5497 2.448307-.7222L59.9124 96.7715c.8275.8276.4283 2.2334-.7222 2.4483-1.9187.3585-3.8759.6074-5.865.7401-.4247.0283-.8395-.1318-1.1405-.4328L.453579 47.796ZM3.93331 61.7589c-1.0331-1.0331-2.70028-.1429-2.32193 1.2683C6.22104 80.2203 19.7604 93.7597 36.9535 98.3693c1.4112.3784 2.3014-1.2888 1.2683-2.3219L3.93331 61.7589ZM201.602 27.535c3.587 0 6.494-2.918 6.494-6.5175S205.189 14.5 201.602 14.5c-3.586 0-6.493 2.918-6.493 6.5175s2.907 6.5175 6.493 6.5175Zm-55.621 56.8396V14.5039h11.54v59.648h31.115v10.2227h-42.655Zm82.136-28.511v28.511h-11.166V34.8555h11.026v8.4876l.14-.0937c1.121-2.6573 2.928-4.8769 5.42-6.6589 2.491-1.8132 5.668-2.7198 9.531-2.7198 3.426 0 6.54.766 9.344 2.2978 2.803 1.5006 5.045 3.7045 6.727 6.6119 1.682 2.9074 2.523 6.4713 2.523 10.6916v30.9026h-11.166V55.0195c0-3.7514-.997-6.5963-2.99-8.5345-1.962-1.9695-4.594-2.9543-7.896-2.9543-2.118 0-4.049.4377-5.793 1.313-1.744.8754-3.13 2.2196-4.158 4.0328-1.028 1.8132-1.542 4.1422-1.542 6.9871Zm101.105 27.6669c2.554 1.0942 5.482 1.6413 8.783 1.6413 2.71 0 5.03-.3439 6.961-1.0317 1.932-.719 3.52-1.6725 4.766-2.8605 1.277-1.1879 2.289-2.4853 3.037-3.8921h.187v6.9871h10.699V50.2833c0-2.4072-.468-4.6111-1.402-6.6119-.934-2.0008-2.289-3.7358-4.065-5.2051-1.744-1.4694-3.862-2.5948-6.354-3.3763-2.491-.8129-5.295-1.2193-8.409-1.2193-4.267 0-7.958.7347-11.073 2.204-3.084 1.4381-5.497 3.3763-7.242 5.8148-1.744 2.4384-2.694 5.1895-2.85 8.2531h10.793c.124-1.438.623-2.7198 1.495-3.8452.872-1.1254 2.056-2.0008 3.551-2.626 1.495-.6565 3.223-.9848 5.186-.9848 1.962 0 3.628.3283 4.999.9848 1.401.6565 2.476 1.5475 3.223 2.6729.748 1.1254 1.122 2.4384 1.122 3.939v.3752c0 1.1254-.39 1.9538-1.168 2.4853-.748.5314-2.025.9222-3.831 1.1723-1.776.2501-4.205.5471-7.289.891-2.523.2813-4.952.7034-7.288 1.2661-2.336.5627-4.423 1.3912-6.261 2.4853-1.806 1.0942-3.239 2.5479-4.298 4.3611-1.059 1.8132-1.588 4.1422-1.588 6.987 0 3.2826.747 6.0336 2.242 8.2532 1.495 2.1884 3.52 3.8453 6.074 4.9707Zm18.081-8.3001c-1.807.9691-4.034 1.4537-6.681 1.4537-2.679 0-4.813-.5627-6.401-1.6881-1.589-1.1567-2.383-2.7355-2.383-4.7362 0-1.5631.436-2.8293 1.308-3.7984.904-.9691 2.087-1.735 3.551-2.2977 1.464-.5628 3.052-.9535 4.765-1.1724 1.246-.1875 2.461-.3751 3.645-.5627 1.183-.2188 2.289-.422 3.317-.6096 1.028-.2188 1.9-.4377 2.616-.6565.748-.2188 1.293-.4533 1.635-.7034v5.5334c0 1.9382-.451 3.7202-1.355 5.3458-.872 1.5944-2.211 2.8917-4.017 3.8921Zm26.094 9.1442V34.8555h10.745v8.1594h.141c.903-2.8136 2.32-4.955 4.251-6.4244 1.962-1.5005 4.532-2.2508 7.709-2.2508.779 0 1.48.0312 2.102.0938.655.0312 1.2.0625 1.636.0937v10.082c-.405-.0625-1.122-.1406-2.149-.2344-1.028-.0938-2.118-.1407-3.271-.1407-1.838 0-3.519.422-5.046 1.2661-1.526.8441-2.741 2.1415-3.644 3.8921-.872 1.7195-1.308 3.8922-1.308 6.5182v28.4641h-11.166Zm-177.401 0V34.8555h11.166v49.5191h-11.166Zm84.238-2.204c3.582 2.2196 7.834 3.3294 12.755 3.3294 3.8 0 7.257-.6878 10.372-2.0633 3.146-1.4068 5.762-3.3294 7.849-5.7678 2.087-2.4697 3.442-5.3146 4.065-8.5346h-10.512c-.468 1.4693-1.231 2.7667-2.29 3.8921-1.027 1.0942-2.32 1.9539-3.877 2.5792-1.558.6252-3.364.9378-5.42.9378-2.772 0-5.155-.6252-7.148-1.8757-1.962-1.2505-3.457-2.9855-4.485-5.2051-.933-2.043-1.443-4.3564-1.529-6.9402h35.915v-3.0012c0-3.8139-.561-7.284-1.682-10.4102-1.121-3.1575-2.71-5.8773-4.766-8.1594-2.055-2.3134-4.531-4.0953-7.428-5.3458-2.866-1.2505-6.058-1.8757-9.578-1.8757-4.578 0-8.627 1.1098-12.147 3.3294-3.52 2.2196-6.276 5.2833-8.27 9.191-1.993 3.9078-2.99 8.3782-2.99 13.4114 0 5.0019.966 9.4568 2.897 13.3645 1.931 3.8765 4.688 6.9246 8.269 9.1442Zm23.501-32.7783c-1.028-2.1258-2.492-3.767-4.392-4.9237-1.9-1.1567-4.142-1.7351-6.728-1.7351-2.554 0-4.781.5784-6.681 1.7351-1.868 1.1567-3.332 2.7979-4.391 4.9237-.756 1.5396-1.234 3.2903-1.434 5.2521h25.059c-.2-1.9618-.678-3.7125-1.433-5.2521Z"></path></svg>
+
+                </a>
+            </div>
+            <div class="flex flex-col flex-1 min-w-2xl">
+                <div class="text-md font-semibold mb-2">Features</div>
+                <div class="text-sm text-[#8a8f98]">
+                    <ul class="list-none">
+                        <li><a href="#">Plan</a></li>
+                        <li><a href="#">Build</a></li>
+                        <li><a href="#">Insights</a></li>
+                        <li><a href="#">Customer Requests</a></li>
+                        <li><a href="#">Linear Asks</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Mobile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col flex-1 min-w-2xl">
+                <div class="text-md font-semibold mb-2">Product</div>
+                <div class="text-sm text-[#8a8f98]">
+                    <ul class="list-none">
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Method</a></li>
+                        <li><a href="#">Integrations</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Download</a></li>
+                        <li><a href="#">Switch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col flex-1 min-w-2xl">
+                <div class="text-md font-semibold mb-2">Company</div>
+                <div class="text-sm text-[#8a8f98]">
+                    <ul class="list-none">
+                        <li><a href="#">Abut</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">README</a></li>
+                        <li><a href="#">Quality</a></li>
+                        <li><a href="#">Brand</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col flex-1 min-w-2xl">
+                <div class="text-md font-semibold mb-2">Resources</div>
+                <div class="text-sm text-[#8a8f98]">
+                    <ul class="list-none">
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">Status</a></li>
+                        <li><a href="#">Startups</a></li>
+                        <li><a href="#">Report vulnerability</a></li>
+                        <li><a href="#">DPA</a></li>
+                        <li><a href="#">Privecy</a></li>
+                        <li><a href="#">Teams</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col flex-1 min-w-2xl">
+                <div class="text-md font-semibold mb-2">Connect</div>
+                <div class="text-sm text-[#8a8f98]">
+                    <ul class="list-none">
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">X (Twitter)</a></li>
+                        <li><a href="#">Github</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+
+        </div>
+
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
