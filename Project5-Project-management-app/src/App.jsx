@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import NewProject from "./components/NewProject";
 import NoProjectSelected from "./components/NoProjectSelected";
 import ProjectSideBar from "./components/ProjectSideBar";
 import SelectedProject from "./components/SelectedProject";
+import { CounterContext } from "./components/CustomContext.jsx";
 
 function App() {
+  const counterState = useContext(CounterContext)
   const [projectState, setProjectState] = useState({
     selectedProjectId : undefined,
     projects : [],
@@ -106,7 +108,8 @@ function App() {
     content = <NoProjectSelected onStartAddProject={handleStartAddProject}/>
   }
   return (
-    <>
+
+    <CounterContext.Provider value={projectState}>
       <main className="h-screen my-8 flex gap-8">
         <ProjectSideBar 
         onStartAddProject={handleStartAddProject} 
@@ -115,8 +118,9 @@ function App() {
         selectedProjectId={projectState.selectedProjectId}
       />
         {content}
+       {console.log("Context getting form contenxt provider in app",counterState.selectedProjectId)}
       </main>
-    </>
+    </CounterContext.Provider>
   );
 }
 

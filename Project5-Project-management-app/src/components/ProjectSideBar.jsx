@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Button from './Button'
+import { CounterContext } from './CustomContext'
 
 function ProjectSideBar({onStartAddProject, projects, onSelectProject, selectedProjectId}) {
+    const counterStae =  useContext(CounterContext)
+    console.log( "context getting from context provider", counterStae.selectedProjectId)
 
   return (
     <aside className="w-1/4 px-8 py-16 bg-stone-900 text-stone-50  rounded-r-xl">
