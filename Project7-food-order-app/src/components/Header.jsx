@@ -6,19 +6,27 @@ import { useRef } from 'react'
 import Button from './UI/Button'
 import Cart from './Cart'
 import UserProgressContext from '../contexts/UserProgressContext'
+import { useSelector, useDispatch } from 'react-redux'
+import { progressAction } from '../contexts/cartStore'
+
 
 export default function Header(){
-    const cartState = useContext(CartContext)
+    // const cartState = useContext(CartContext)
+    const cart = useSelector(state => state.cart.items)
+    const progress = useSelector(state => state.progress)
+    const dispatch = useDispatch()
     const userProgressCtx= useContext(UserProgressContext)
-    const totalCartItems = cartState.items.reduce((totalItems, item)=>{
+
+    const totalCartItems = cart.reduce((totalItems, item)=>{
         return totalItems + item.quantity
     }, 0)
 
     const modalRef = useRef(false)
 
     function handleShowCart(){
-        userProgressCtx.showCart()
+        dispatch(progressAction.showCart())
     }
+    console.log(progress)
     return (
         <header id='main-header'>
             <div id='title'>

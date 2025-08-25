@@ -1,14 +1,22 @@
 import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../contexts/CartContext'
-import {currencyFormatter} from '../lib/formatting.js'
+import {currencyFormatter} from '../utils/formatting.js'
 import Button from './UI/Button.jsx'
+import { cartActions } from '../contexts/cartStore.js'
+import {useDispatch} from 'react-redux'
+import { useSelector } from 'react-redux'
+
 
 export default function MealCard({ meal}) {
-    const cartState = useContext(CartContext)
+    // const cartState = useContext(CartContext)
+    const dispatch = useDispatch()
+    const cart = useSelector(state => state.cart.items)
+    
 
     function addToCart(){
-        cartState.addItem(meal)
+        // cartState.addItem(meal)
+        dispatch(cartActions.addItem(meal))
     }
   return (
     <li className='meal-item'>
