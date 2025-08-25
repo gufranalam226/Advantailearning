@@ -18,7 +18,6 @@ export default function Header(){
 
     function handleShowCart(){
         userProgressCtx.showCart()
-        console.log(userProgressCtx)
     }
     return (
         <header id='main-header'>

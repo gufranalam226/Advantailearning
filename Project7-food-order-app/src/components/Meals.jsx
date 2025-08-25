@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react'
 import MealCard from './MealCard'
-import useHttp from '../hooks/useHTTP.js'
+import useHttp from '../hooks/useHttp.js'
 import Error from './Error.jsx'
 
 export default function Meals() {

@@ -40,7 +40,6 @@ function cartReducer(state, action){
             };
             updatedItems[existingCartItemIndex] = updatedItem
         }
-        console.log(updatedItems)
 
 
         return {...state, items : updatedItems };

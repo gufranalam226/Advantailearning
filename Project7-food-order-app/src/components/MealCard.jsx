@@ -3,20 +3,12 @@ import { useContext } from 'react'
 import { CartContext } from '../contexts/CartContext'
 import {currencyFormatter} from '../lib/formatting.js'
 import Button from './UI/Button.jsx'
-import { useDispatch } from 'react-redux'
 
 export default function MealCard({ meal}) {
-    // const cartState = useContext(CartContext)
-
-    const dispatch = useDispatch()
-    
-    const totalCartItems = cartState.items.reduce((totalItems, item)=>{
-        return totalItems + item.quantity
-    }, 0)
+    const cartState = useContext(CartContext)
 
     function addToCart(){
-        dispatch(addItem(meal))
-        
+        cartState.addItem(meal)
     }
   return (
     <li className='meal-item'>

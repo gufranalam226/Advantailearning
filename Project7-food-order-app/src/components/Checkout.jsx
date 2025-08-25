@@ -6,7 +6,7 @@ import { currencyFormatter } from '../lib/formatting'
 import Input from './UI/Input'
 import Button from './UI/Button'
 import { CartContext } from '../contexts/CartContext'
-import useHttp from '../hooks/useHTTP'
+import useHttp from '../hooks/useHttp'
 import Error from './Error'
 
 
@@ -18,7 +18,7 @@ const requestConfig = {
     
 }
 
-export default function Cart() {
+export default function Checkout() {
     const cartState = useContext(CartContext)
     const userProgressCtx = useContext(UserProgressContext)
 
@@ -27,8 +27,7 @@ export default function Cart() {
     const cartTotal = cartState.items.reduce((totalPrice, item)=> totalPrice + item.quantity*item.price ,0)
 
     function handleCloseCartModal (){
-        userProgressCtx.hideCart()
-
+        userProgressCtx.hideCheckout()
     }
 
     function handleFinish(){
@@ -54,7 +53,6 @@ export default function Cart() {
     }
 
     let actions = (<>
-
         <Button type="button" onClick={handleCloseCartModal} textOnly>Close</Button>
         <Button  >Submit Order</Button>
     
@@ -70,19 +68,16 @@ export default function Cart() {
         <CartModal open={userProgressCtx.progress === 'checkout'} onClose={handleCloseCartModal}>
             <h2>Success!</h2>
             <p>Your order was submitted successfully.</p>
-            <p>We will get back to you with more details vis email within the next few minutes.</p>
+            <p>We will get back to you with more details via email within the next few minutes.</p>
             <p className='modal-actions'>
                 <Button onClick={handleFinish}>Okay</Button>
             </p>
-
-
         </CartModal>
         )
     }
    
-
   return (
-    <CartModal  open={userProgressCtx.progress === 'checkout'} onClose={handleCloseCartModal}>
+    <CartModal open={userProgressCtx.progress === 'checkout'} onClose={handleCloseCartModal}>
         <form onSubmit={handleSubmit}>
             <h2>Checkout</h2>
             <p>Total Amount : {currencyFormatter.format(cartTotal)}</p>
@@ -98,11 +93,7 @@ export default function Cart() {
             {error && <Error title='Failed to place order' message={error} />}
 
             <p className='modal-actions'>{actions}</p>
-            
-
         </form>
-      
-      
     </CartModal>
   )
 }
