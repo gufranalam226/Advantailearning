@@ -6,6 +6,7 @@ import {
   getNewsForYearAndMonth,
 } from "@/src/lib/news";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default async function filterNewsPage({ params }) {
   const filter = params.filter;
@@ -52,7 +53,9 @@ export default async function filterNewsPage({ params }) {
           </ul>
         </nav>
       </header>
-      {newsContent}
+      <Suspense fallback={<p>Loading...</p>}>
+        {newsContent}
+      </Suspense>
     </>
   );
 }
